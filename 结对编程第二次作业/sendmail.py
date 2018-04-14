@@ -22,13 +22,13 @@ message.attach(MIMEText('12345', 'plain', 'utf-8'))
 
 att1 = MIMEText(open('question.txt', 'rb').read(), 'base64', 'utf-8')
 att1["Content-Type"] = 'application/octet-stream'
-att1["Content-Disposition"] = 'attachment; filename="问卷.txt"'
+att1["Content-Disposition"] = 'attachment; filename="question.txt"'
 message.attach(att1)
 
 
 att2 = MIMEText(open('answer.txt', 'rb').read(), 'base64', 'utf-8')
 att2["Content-Type"] = 'application/octet-stream'
-att2["Content-Disposition"] = 'attachment; filename="答案.txt"'
+att2["Content-Disposition"] = 'attachment; filename="answer.txt"'
 message.attach(att2)
 
 try:
